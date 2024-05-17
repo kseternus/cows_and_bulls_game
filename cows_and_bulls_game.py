@@ -7,8 +7,10 @@ tries = 0
 
 random.shuffle(numbers)
 
+
 def random_number(number):
-    number +=numbers.pop(0)
+    number += numbers.pop(0)
+
 
 def cows_bulls():
     bulls = 0
@@ -19,6 +21,7 @@ def cows_bulls():
         elif guess[i] in number:
             cows += 1
     print(f'Bulls: {bulls}, cows {cows}')
+
 
 def main():
     global guess, tries
@@ -31,6 +34,7 @@ def main():
             cows_bulls()
             tries += 1
     print(f'You are correct! number was {number}! You guessed it after {tries} tries!')
+
 
 for _ in range(4):
     random_number(number)
